@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        #img {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="abc">
+        <img id="img" >
+
+    </div>
+    
+    <script>
+        var index = 0;
+        changeImage = function() {
+            var bomImage = ['./bom/bomb1.png', './bom/bomb2.png', './bom/bomb3.png',
+            './bom/bomb1.png', './bom/bomb2.png', './bom/bomb3.png',
+            './bom/bomb1.png', './bom/bomb2.png', './bom/bomb3.png', 
+            './bom/bomb1.png', './bom/bomb2.png', './bom/bomb3.png', 
+            './bom/explosion-center1.png', './bom/explosion-center2.png',
+             './bom/explosion-center4.png', './bom/explosion-center4.png'];
+            document.getElementById('img').src = bomImage[index];
+            index ++;
+            if(index>=17) {
+                //index = 0;
+                document.getElementById('img').src = './bomberman/no.png'
+            }
+        }
+        setInterval(changeImage, 300);
+        
+    </script>
+</body>
+</html>
